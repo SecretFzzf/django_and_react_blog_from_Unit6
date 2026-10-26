@@ -1,0 +1,25 @@
+# ============================================================
+#  墨韵博客 · 依赖清单
+#  安装命令：pip install -r requirements.txt
+# ============================================================
+
+# ---------- 核心框架 ----------
+Django>=4.2,<5.0
+djangorestframework>=3.14,<3.16
+djangorestframework-simplejwt>=5.3,<6.0
+
+# ---------- 数据库 ----------
+# 使用 PyMySQL 伪装为 MySQLdb，替代方案（见 blog/__init__.py）
+PyMySQL>=1.1.0
+
+# ---------- 跨域 / 过滤 ----------
+django-cors-headers>=4.3
+django-filter>=23.5
+
+# ---------- 图片处理（ImageField 依赖） ----------
+Pillow>=10.0
+
+# ---------- 历史迁移兼容 ----------
+# api/migrations/0001_initial.py 中使用 autoslug.fields.AutoSlugField
+# 为保证迁移可回放，保留此依赖
+django-autoslug>=1.9.9

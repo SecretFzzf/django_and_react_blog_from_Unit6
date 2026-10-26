@@ -1,0 +1,57 @@
+# ==============================================================================
+#  墨韵博客 · 全局 Git 忽略规则
+# ==============================================================================
+
+# ---------- Python & 虚拟环境 ----------
+*.py[cod]
+*$py.class
+__pycache__/
+*.so
+.Python
+env/
+.env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ---------- 数据库与本地持久化数据 ----------
+*.sqlite3
+*.db
+db_data/
+
+# ---------- 前端构建与依赖 ----------
+frontend/node_modules/
+frontend/build/
+frontend/.pnp
+frontend/.pnp.js
+frontend/coverage/
+
+# ---------- 临时日志与排错文件 ----------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+frontend/frontend.log
+frontend/frontend_err.log
+
+# ---------- 编辑器与系统临时文件 ----------
+.idea/
+.vscode/
+.codex/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# ---------- 媒体上传文件（生产/测试产生的头像与文章插图） ----------
+backend/media/
+collected_static/
+
+# ---------- 敏感/无关本地测试脚本 ----------
+backend/test.py
+backend/ckey_run*
